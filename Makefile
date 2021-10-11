@@ -23,21 +23,6 @@ help: ## Display the Make targets
 .PHONY: check_doc_links
 check_doc_links: ## Check Markdown files for valid links
 	@python3 tools/python/verify_npm_packages.py
-	# @pip3 show requests > /dev/null || pip3 install requests
-	# @python3 tools/python/verify_doc_links.py
-	# @echo "$@: OK"
-
-
-## npm update - 
-## npm audit fix
-## npm audit fix --force
-## makefile purpose is to check vs making changes
-## seperate docs in hack and tools
-## could make script in another language
-## long bash scripts should be another language
-## bash should be short, use as routing
-
-## seperate command to update audit fixes- make asdfasdf..
-## rn just make sure the security fixes are made. Major upgrades are up to dev discresh.
-## poss feature to check which packages cause breaking changes
-
+	@pip3 show requests > /dev/null || pip3 install requests
+	@python3 tools/python/verify_doc_links.py
+	@echo "$@: OK"
